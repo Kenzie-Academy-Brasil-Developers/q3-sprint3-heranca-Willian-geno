@@ -3,7 +3,7 @@ class Recipiente:
     def __init__(self, tamanho:float = 0, conteudo: float = 0, limpo:bool = True):
         self.tamanho = tamanho if tamanho >= 0 else 0
         self.conteudo = conteudo if conteudo >= 0 else 0
-        self.linpo = limpo
+        self.limpo = limpo
 
 
     def esvaziar(self):
@@ -17,30 +17,30 @@ class Recipiente:
     
     def lavar(self):
         self.conteudo = 0
-        self.linpo = True
+        self.limpo = True
 
     def  esta_limpo(self):
-        return self.linpo
+        return self.limpo
 
     def estado(self):
-        if self.linpo:
+        if self.limpo:
             return "limpo"
         else:
             return "sujo"
 
     def sujar(self):
-        self.linpo = False
+        self.limpo = False
             
 
     def __repr__(self):
-        if self.linpo:
+        if self.limpo:
             return f'Um recipiente limpo não especificado'
         else:
             return f'Um recipiente sujo não especificado'
 
 
     def __str__(self):
-        if self.linpo:
+        if self.limpo:
             return f'Um recipiente limpo não especificado'
         else:
             return f'Um recipiente sujo não especificado'
